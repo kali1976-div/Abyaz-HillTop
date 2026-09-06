@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Abyaz Hill Top Travel & Tours</title>
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="../Home/index.html">
+      <span class=""><img src="./images/abyaz-icon.png" alt="" style="width: 50px; height: 50px;">></span>
+      <span class="brand-text">
+        <span class="top">ABYAZ <span>HILL TOP</span></span><br>
+        <span class="sub">TRAVEL &amp; TOURS</span>
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mx-auto my-3 my-lg-0 text-center">
+        <li class="nav-item"><a class="nav-link" href="../Home/index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../service/index.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="../Visa-Packages/index.html">Tour Packages</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../About-Us/index.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="../Contacts-us/index.html">Contact</a></li>
+      </ul>
+      <div class="text-center text-lg-start">
+        <a href="#footer" class="btn-book"><i class="bi bi-airplane-fill"></i> Book Now</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ PAGE HERO ============ -->
+<header class="page-hero">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-6">
+        <span class="eyebrow">Our Services</span>
+        <h1>Complete Travel &amp; Visa Solutions Under One Roof</h1>
+        <p class="lead-desc">From visa assistance and flight bookings to hotels, tour packages, Umrah and transport services &mdash; we make your journey simple, smooth, and stress-free.</p>
+        <div class="hero-mini-list">
+          <div class="hero-mini-item"><div class="ic"><i class="bi bi-airplane"></i></div><span>Fly</span></div>
+          <div class="hero-mini-item"><div class="ic"><i class="bi bi-house-door"></i></div><span>Stay</span></div>
+          <div class="hero-mini-item"><div class="ic"><i class="bi bi-camera"></i></div><span>Explore</span></div>
+          <div class="hero-mini-item"><div class="ic"><i class="bi bi-shield-check"></i></div><span>Travel Safe</span></div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="page-hero-visual">
+          <img src="https://picsum.photos/seed/hikertraveler/900/700" alt="Traveler overlooking mountains">
+          <i class="bi bi-airplane-fill plane-fly"></i>
+          <div class="caption">Explore<br>The World</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ SERVICES (rendered via JS) ============ -->
+<section class="section-pad section-bg-tint" id="services">
+  <div class="container">
+    <div class="text-center mx-auto mb-4" style="max-width:640px;">
+      <span class="eyebrow">Our Services</span>
+      <h2>Services We Offer</h2>
+      <p>Everything you need for a smooth and memorable journey.</p>
+    </div>
+
+    <div class="scroller-controls">
+      <button class="scroller-btn" id="svcPrev" aria-label="Scroll left"><i class="bi bi-chevron-left"></i></button>
+      <button class="scroller-btn" id="svcNext" aria-label="Scroll right"><i class="bi bi-chevron-right"></i></button>
+    </div>
+
+    <div class="scroller-wrap">
+      <!-- Cards are injected here entirely by JavaScript from the servicesData array below -->
+      <div class="services-track" id="servicesTrack"></div>
+    </div>
+    <div class="scroller-dots" id="svcDots"></div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section-pad section-bg-tint" style="padding-top:0;">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <span class="eyebrow">How It Works</span>
+        <h2>Your Journey, Made Easy</h2>
+        <p>Get your travel plans done in just a few simple steps.</p>
+        <div class="row gy-4 mt-2 align-items-start text-center">
+          <div class="col-3">
+            <div class="step-item">
+              <div class="step-circle"><i class="bi bi-envelope"></i></div>
+              <h6>1. Contact Us</h6>
+              <p>Share your travel needs with us.</p>
+            </div>
+          </div>
+          <div class="col-auto d-none d-md-flex align-items-center" style="margin-top:1.6rem;"><i class="bi bi-arrow-right step-arrow"></i></div>
+          <div class="col-3">
+            <div class="step-item">
+              <div class="step-circle"><i class="bi bi-clipboard-check"></i></div>
+              <h6>2. Get a Plan</h6>
+              <p>We provide the best options for you.</p>
+            </div>
+          </div>
+          <div class="col-auto d-none d-md-flex align-items-center" style="margin-top:1.6rem;"><i class="bi bi-arrow-right step-arrow"></i></div>
+          <div class="col-3">
+            <div class="step-item">
+              <div class="step-circle"><i class="bi bi-airplane"></i></div>
+              <h6>3. Book &amp; Confirm</h6>
+              <p>We handle the rest, from booking to visa.</p>
+            </div>
+          </div>
+          <div class="col-auto d-none d-md-flex align-items-center" style="margin-top:1.6rem;"><i class="bi bi-arrow-right step-arrow"></i></div>
+          <div class="col-3">
+            <div class="step-item">
+              <div class="step-circle"><i class="bi bi-suitcase"></i></div>
+              <h6>4. Travel Happy</h6>
+              <p>Pack your bags and explore the world!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="journey-visual">
+          <i class="bi bi-globe-americas globe"></i>
+          <div class="card-stack"><img src="https://picsum.photos/seed/eiffeltripcard/260/380" alt="Trip card"></div>
+          <div class="passport"><i class="bi bi-shield-lock-fill"></i></div>
+          <i class="bi bi-airplane-fill plane-ic"></i>
+          <i class="bi bi-geo-alt-fill pin-ic"></i>
+          <i class="bi bi-heart-fill heart-ic"></i>
+          <div class="caption">Dream<br>Plan<br>Travel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE ============ -->
+<section class="section-pad">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <div class="confidence-visual">
+          <img src="https://picsum.photos/seed/santorinitravel/700/650" alt="Traveler with confidence">
+          <i class="bi bi-airplane-fill plane-ic"></i>
+          <div class="caption">Travel with<br>Confidence</div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <span class="eyebrow">Why Choose Abyaz?</span>
+        <h2 class="mb-2">Why Choose Abyaz?</h2>
+        <p class="mb-4">We go beyond bookings &mdash; we create experiences.</p>
+        <div class="row g-4">
+          <div class="col-6 col-md-3">
+            <div class="why-feature">
+              <div class="icon-circle bg-green-tint"><i class="bi bi-tag-fill"></i></div>
+              <h6 style="font-weight:700;">Best Price Guarantee</h6>
+              <p style="font-size:.85rem;">Get the best deals and unbeatable prices on all travel services.</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="why-feature">
+              <div class="icon-circle bg-blue-tint"><i class="bi bi-person-check-fill"></i></div>
+              <h6 style="font-weight:700;">Expert Travel Consultants</h6>
+              <p style="font-size:.85rem;">Personalized guidance from our experienced team.</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="why-feature">
+              <div class="icon-circle bg-purple-tint"><i class="bi bi-arrow-repeat"></i></div>
+              <h6 style="font-weight:700;">24/7 Customer Assistance</h6>
+              <p style="font-size:.85rem;">We're always here to help, anytime, anywhere.</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="why-feature">
+              <div class="icon-circle bg-purple-tint"><i class="bi bi-shield-check"></i></div>
+              <h6 style="font-weight:700;">Hassle-Free Experience</h6>
+              <p style="font-size:.85rem;">We handle the details, so you can enjoy your journey.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="container pb-5">
+  <div class="cta-banner d-flex flex-wrap align-items-center justify-content-between gap-3">
+    <div class="d-flex align-items-center gap-3">
+      <div class="cta-icon"><i class="bi bi-send-fill"></i></div>
+      <div>
+        <h4 class="text-white mb-1">Ready to Plan Your Next Adventure?</h4>
+        <p class="mb-0" style="color:rgba(255,255,255,.85);">Let Abyaz Hill Top Travel &amp; Tours take care of your travel and visa needs.</p>
+      </div>
+    </div>
+    <a href="#footer" class="btn-cta">Get Free Consultation <i class="bi bi-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" id="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="footer-brand d-flex align-items-center gap-2 mb-3">
+          <span class=""><img src="./images/abyaz-icon.png" alt="" style="width: 40px; height: 40px;"></span>
+          <span class="brand-text">
+            <span class="top">ABYAZ <span>HILL TOP</span></span><br>
+            <span class="sub">TRAVEL &amp; TOURS</span>
+          </span>
+        </div>
+        <p class="text-white-50" style="max-width:280px;">Your Journey, Our Priority.</p>
+        <div class="d-flex mt-3">
+          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-tiktok"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6>Quick Links</h6>
+        <a href="../Home/index.html">Home</a>
+        <a href="../service/index.html">Services</a>
+        <a href="../Visa-Packages/index.html">Tour Packages</a>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6>&nbsp;</h6>
+        <a href="../About-Us/index.html">About Us</a>
+        <a href="../Contacts-us/index.html">Contact</a>
+      </div>
+      <div class="col-lg-2">
+        <h6>Contact Us</h6>
+        <a href="tel:+923001234567"><i class="bi bi-telephone me-1"></i> +92 300 123 4567</a>
+        <a href="mailto:info@abyaztravel.com"><i class="bi bi-envelope me-1"></i> info@abyaztravel.com</a>
+        <a href="#"><i class="bi bi-geo-alt me-1"></i> Peshawar, Pakistan</a>
+      </div>
+      <div class="col-lg-2">
+        <h6>Newsletter</h6>
+        <p class="text-white-50" style="font-size:.82rem;">Get the latest travel deals and offers.</p>
+        <form class="d-flex mb-2" onsubmit="return false;">
+          <input type="email" class="form-control footer-sub-input" placeholder="Your email address">
+          <button class="footer-sub-btn"><i class="bi bi-arrow-right"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+      <span>&copy; 2026 Abyaz Hill Top Travel &amp; Tours. All Rights Reserved.</span>
+      <span>
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms &amp; Conditions</a>
+        <i class="bi bi-airplane-fill ms-2"></i>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js">
+/* ============================================================
+   SERVICES DATA — this is the single source of truth.
+   To add a brand new service card, just push a new object into
+   this array (no HTML editing needed) and the scroller re-renders.
+   ============================================================ */
+
+</script>
+</body>
+</html>

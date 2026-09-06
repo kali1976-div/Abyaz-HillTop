@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Abyaz Hill Top Travel & Tours</title>
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR  -->
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="../Home/index.html">
+      <span class=""><img src="./images/abyaz-icon.png" alt="" style="width: 40px; height: 40px;"></span>
+      <span class="brand-text">
+        <span class="top">ABYAZ <span>HILL TOP</span></span><br>
+        <span class="sub">TRAVEL &amp; TOURS</span>
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mx-auto my-3 my-lg-0 text-center">
+        <li class="nav-item"><a class="nav-link" href="../Home/index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../service/index.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="../Visa-Packages/index.html">Tour Packages</a></li>
+        <li class="nav-item"><a class="nav-link" href="../About-Us/index.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../Contacts-us/index.html">Contact</a></li>
+      </ul>
+      <div class="text-center text-lg-start">
+        <a href="#form" class="btn-book"><i class="bi bi-airplane-fill"></i> Book Now</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-6">
+        <span class="eyebrow">Get in Touch</span>
+        <h1>Let's Plan Your Next <span class="script-text">Adventure</span> Together</h1>
+        <p class="lead-desc">Have a question about visas, flights, hotels or a tour package? Send us a message or drop by one of our offices &mdash; we usually reply within a few hours.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="#form" class="btn-book"><i class="bi bi-send"></i> Send a Message</a>
+          <a href="https://wa.me/923001234567" class="btn-book" style="background:#25D366; color:#fff!important;"><i class="bi bi-whatsapp"></i> Chat on WhatsApp</a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="page-hero-visual">
+          <img src="https://picsum.photos/seed/contacthero/900/650" alt="Contact Abyaz Hill Top">
+          <div class="caption">We'd Love<br>to Hear From You</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!--  QUICK CONTACT CARDS (JS rendered) -->
+<section class="pb-5">
+  <div class="container">
+    <div class="row g-4" id="contactInfoGrid"><!-- injected by JS --></div>
+  </div>
+</section>
+
+<!--  FORM + MAP  -->
+<section class="section-pad section-bg-tint" id="form">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-6">
+        <span class="eyebrow">Send a Message</span>
+        <h2 class="mb-4">We'll Get Back to You Shortly</h2>
+        <div class="form-panel">
+          <div class="alert alert-success d-flex align-items-center gap-2" id="formAlert" role="alert">
+            <i class="bi bi-check-circle-fill"></i>
+            <span id="formAlertText">Thanks! Your message has been sent &mdash; we'll be in touch soon.</span>
+          </div>
+          <form id="contactForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fName" placeholder="Your name">
+                <div class="field-error" id="err-fName">Please enter your name.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="fEmail" placeholder="you@example.com">
+                <div class="field-error" id="err-fEmail">Please enter a valid email.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="fPhone" placeholder="+92 300 1234567">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Service Interested In</label>
+                <select class="form-select" id="fService">
+                  <option value="">Select a service</option>
+                  <option>Visa Assistance</option>
+                  <option>Flight Bookings</option>
+                  <option>Hotel Bookings</option>
+                  <option>Tour Packages</option>
+                  <option>Umrah Services</option>
+                  <option>Transport Services</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" id="fMessage" rows="4" placeholder="Tell us a bit about your trip..."></textarea>
+                <div class="field-error" id="err-fMessage">Please enter a short message.</div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn-submit w-100" id="submitBtn">
+                  <i class="bi bi-send me-1"></i> Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <span class="eyebrow">Find Us</span>
+        <h2 class="mb-4">Visit Our Office</h2>
+        <div class="map-wrap mb-4">
+          <iframe src="https://www.google.com/maps?q=Peshawar,Pakistan&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Abyaz Hill Top office location"></iframe>
+        </div>
+        <div class="office-card">
+          <span class="badge-hq">Head Office</span>
+          <h5>Peshawar, Khyber Pakhtunkhwa</h5>
+          <div class="row-line"><i class="bi bi-geo-alt-fill"></i><span>University Road, Peshawar, Pakistan</span></div>
+          <div class="row-line"><i class="bi bi-telephone-fill"></i><span>+92 300 123 4567</span></div>
+          <div class="row-line"><i class="bi bi-clock-fill"></i><span>Mon &ndash; Sat, 9:00 AM &ndash; 8:00 PM</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OTHER OFFICES (JS rendered) ============ -->
+<section class="section-pad">
+  <div class="container">
+    <div class="text-center mx-auto mb-5" style="max-width:640px;">
+      <span class="eyebrow">Our Branches</span>
+      <h2>Find an Abyaz Office Near You</h2>
+      <p>Prefer to talk in person? Walk into any of our branches.</p>
+    </div>
+    <!-- Cards are injected entirely by JavaScript from the officesData array below -->
+    <div class="row g-4" id="officesGrid"></div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section-pad section-bg-tint">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <span class="eyebrow">FAQs</span>
+        <h2>Quick Answers</h2>
+        <p>A few things people usually ask before reaching out.</p>
+      </div>
+      <div class="col-lg-8">
+        <div class="accordion" id="contactFaq">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cfaq1">
+                How quickly will I get a reply?
+              </button>
+            </h2>
+            <div id="cfaq1" class="accordion-collapse collapse show" data-bs-parent="#contactFaq">
+              <div class="accordion-body">We typically respond within 2-4 business hours during office hours, and within 24 hours on weekends and public holidays.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cfaq2">
+                Can I visit without an appointment?
+              </button>
+            </h2>
+            <div id="cfaq2" class="accordion-collapse collapse" data-bs-parent="#contactFaq">
+              <div class="accordion-body">Yes, walk-ins are welcome at all branches during office hours. For visa consultations, booking a slot in advance helps us prepare and reduces your wait time.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cfaq3">
+                Do you offer support over WhatsApp?
+              </button>
+            </h2>
+            <div id="cfaq3" class="accordion-collapse collapse" data-bs-parent="#contactFaq">
+              <div class="accordion-body">Yes, our WhatsApp line is monitored during business hours and is often the fastest way to reach a consultant directly.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="container pb-5">
+  <div class="cta-banner d-flex flex-wrap align-items-center justify-content-between gap-3">
+    <div class="d-flex align-items-center gap-3">
+      <div class="cta-icon"><i class="bi bi-headset"></i></div>
+      <div>
+        <h4 class="text-white mb-1">Prefer to Talk Right Now?</h4>
+        <p class="mb-0" style="color:rgba(255,255,255,.85);">Call us directly and speak with a travel consultant today.</p>
+      </div>
+    </div>
+    <a href="tel:+923001234567" class="btn-cta"><i class="bi bi-telephone-fill"></i> +92 300 123 4567</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" id="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="footer-brand d-flex align-items-center gap-2 mb-3">
+          <span class=""><img src="./images/abyaz-icon.png" alt="" style="width: 40px; height: 40px;"></span>
+          <span class="brand-text">
+            <span class="top">ABYAZ <span>HILL TOP</span></span><br>
+            <span class="sub">TRAVEL &amp; TOURS</span>
+          </span>
+        </div>
+        <p class="text-white-50" style="max-width:280px;">Your Journey, Our Priority.</p>
+        <div class="d-flex mt-3">
+          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-tiktok"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a> 
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6>Quick Links</h6>
+        <a href="../Home/index.html">Home</a>
+        <a href="../service/index.html">Services</a>
+        <a href="../Visa-Packages/index.html">Tour Packages</a>
+        
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6>&nbsp;</h6>
+        <a href="../About-Us/index.html">About Us</a>
+        <a href="../Contacts-us/index.html">Contact</a>
+      </div>
+      <div class="col-lg-2">
+        <h6>Contact Us</h6>
+        <a href="tel:+923001234567"><i class="bi bi-telephone me-1"></i> +92 300 123 4567</a>
+        <a href="mailto:info@abyaztravel.com"><i class="bi bi-envelope me-1"></i> info@abyaztravel.com</a>
+        <a href="#"><i class="bi bi-geo-alt me-1"></i> Peshawar, Pakistan</a>
+      </div>
+      <div class="col-lg-2">
+        <h6>Newsletter</h6>
+        <p class="text-white-50" style="font-size:.82rem;">Get the latest travel deals and offers.</p>
+        <form class="d-flex mb-2" onsubmit="return false;">
+          <input type="email" class="form-control footer-sub-input" placeholder="Your email address">
+          <button class="footer-sub-btn"><i class="bi bi-arrow-right"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+      <span>&copy; 2026 Abyaz Hill Top Travel &amp; Tours. All Rights Reserved.</span>
+      <span>
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms &amp; Conditions</a>
+        <i class="bi bi-airplane-fill ms-2"></i>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
