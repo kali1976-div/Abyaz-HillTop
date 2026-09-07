@@ -63,7 +63,7 @@ function renderServices(list){
         <div class="icon-circle"><i class="bi ${svc.icon}"></i></div>
         <h5>${svc.title}</h5>
         <p>${svc.desc}</p>
-        <a href="#" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a>
+        
       </div>`;
     track.appendChild(card);
 
@@ -74,7 +74,7 @@ function renderServices(list){
 }
 renderServices(servicesData);
 
-/* ---------- Horizontal scroll controls (left <-> right) ---------- */
+/* Horizontal scroll controls (left <-> right)  */
 const prevBtn = document.getElementById('svcPrev');
 const nextBtn = document.getElementById('svcNext');
 
@@ -107,7 +107,7 @@ track.addEventListener('scroll', updateScrollerButtons);
 window.addEventListener('resize', updateScrollerButtons);
 updateScrollerButtons();
 
-/* ---------- Drag-to-scroll with mouse (desktop) ---------- */
+/*  Drag-to-scroll with mouse (desktop)  */
 let isDown = false, startX, scrollStart;
 track.addEventListener('mousedown', (e) => {
   isDown = true;
@@ -126,7 +126,7 @@ window.addEventListener('mousemove', (e) => {
   track.scrollLeft = scrollStart - walk;
 });
 
-/* ---------- Optional: mouse-wheel maps vertical wheel to horizontal scroll ---------- */
+/* Optional: mouse-wheel maps vertical wheel to horizontal scroll  */
 track.addEventListener('wheel', (e) => {
   if(Math.abs(e.deltaY) > Math.abs(e.deltaX)){
     e.preventDefault();
