@@ -1,0 +1,774 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blogs | Abyaz Hill Top Travel & Tours</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8fbff;
+            color: #263238;
+        }
+
+        /* =========================
+           BLOG SECTION
+        ========================== */
+
+        .blogs-section {
+            padding: 70px 20px;
+        }
+
+        .blogs-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* =========================
+           TITLE
+        ========================== */
+
+        .blogs-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .blogs-title h1 {
+            font-size: 42px;
+            font-weight: 700;
+            color: #123b5d;
+            margin-bottom: 12px;
+        }
+
+        .blogs-title p {
+            color: #6c757d;
+            font-size: 16px;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           BLOG CARD
+        ========================== */
+
+        .blog-card {
+            height: 100%;
+            background: #ffffff;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid #e8eef3;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10);
+        }
+
+        /* =========================
+           BLOG IMAGE
+        ========================== */
+
+        .blog-image {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        /* =========================
+           BLOG CONTENT
+        ========================== */
+
+        .blog-content {
+            padding: 25px;
+        }
+
+        .blog-category {
+            display: inline-block;
+            background: #eef7ff;
+            color: #0d6efd;
+            padding: 5px 11px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .blog-date {
+            font-size: 13px;
+            color: #198754;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .blog-date i {
+            margin-right: 5px;
+        }
+
+        .blog-content h3 {
+            font-size: 21px;
+            font-weight: 600;
+            color: #123b5d;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .blog-content p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+
+        /* =========================
+           LEARN MORE BUTTON
+        ========================== */
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+
+            border: none;
+            background: transparent;
+
+            text-decoration: none;
+            color: #0d6efd;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+
+            padding: 0;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #084298;
+            gap: 11px;
+        }
+
+        /* =========================
+           MODAL
+        ========================== */
+
+        .modal-content {
+            border: none;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+        }
+
+        .modal-header {
+            background: #123b5d;
+            color: white;
+            padding: 20px 25px;
+            border-bottom: none;
+        }
+
+        .modal-title {
+            font-size: 21px;
+            font-weight: 600;
+            padding-right: 20px;
+        }
+
+        .modal-header .btn-close {
+            filter: brightness(0) invert(1);
+            opacity: 1;
+        }
+
+        .modal-body {
+            padding: 25px;
+        }
+
+        .modal-body p {
+            color: #6c757d;
+            font-size: 15px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .modal-footer {
+            padding: 15px 25px 20px;
+            border-top: none;
+        }
+
+        .modal-footer .btn {
+            border-radius: 8px;
+            padding: 8px 20px;
+        }
+     
+        
+
+
+
+        /* =========================
+   BACK TO HOME BUTTON
+========================= */
+
+.back-home-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 28px;
+
+    background: #123b5d;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+}
+
+.back-home-btn:hover {
+    background: #0d6efd;
+    color: white;
+    transform: translateY(-2px);
+}
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 768px) {
+
+            .blogs-section {
+                padding: 50px 15px;
+            }
+
+            .blogs-title {
+                margin-bottom: 35px;
+            }
+
+            .blogs-title h1 {
+                font-size: 34px;
+            }
+
+            .blog-image {
+                height: 200px;
+            }
+
+        }
+
+        @media (max-width: 576px) {
+
+            .blogs-title h1 {
+                font-size: 30px;
+            }
+
+            .blogs-title p {
+                font-size: 14px;
+            }
+
+            .blog-content {
+                padding: 20px;
+            }
+
+            .blog-content h3 {
+                font-size: 19px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- ==========================================
+     BLOGS SECTION
+========================================== -->
+
+<section class="blogs-section">
+
+    <div class="blogs-container">
+
+        <!-- PAGE TITLE -->
+
+        <div class="blogs-title">
+
+            <h1>Travel Blogs</h1>
+
+            <p>
+                Explore useful travel tips, destination guides, visa information,
+                and helpful advice to make your journey easier and more memorable.
+            </p>
+
+        </div>
+
+
+        <!-- ==========================================
+             BLOG CARDS
+        =========================================== -->
+
+        <div class="row g-4">
+
+
+            <!-- ==========================================
+                 BLOG 1
+            =========================================== -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="blog-card">
+
+                    <img
+                        src="https://picsum.photos/800/500?random=21"
+                        alt="Beautiful travel destination"
+                        class="blog-image"
+                    >
+
+                    <div class="blog-content">
+
+                        <span class="blog-category">
+                            Travel Tips
+                        </span>
+
+                        <div class="blog-date">
+                            <i class="bi bi-calendar3"></i>
+                            September 6, 2026
+                        </div>
+
+                        <h3>
+                            10 Essential Travel Tips for a Stress-Free Trip
+                        </h3>
+
+                        <p>
+                            Planning your next adventure? Discover simple and
+                            practical tips that can help you prepare for your
+                            journey and enjoy a smoother travel experience.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="read-more"
+                            data-bs-toggle="modal"
+                            data-bs-target="#blogModal"
+                            onclick="showBlog(
+                                '10 Essential Travel Tips for a Stress-Free Trip',
+                                'Planning your next adventure? Prepare your travel documents in advance, check your luggage requirements, organize your accommodation, keep important contact information available, and check the latest travel requirements before leaving. A little preparation can make your journey much easier and more enjoyable.'
+                            )"
+                        >
+                            Learn More
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==========================================
+                 BLOG 2
+            =========================================== -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="blog-card">
+
+                    <img
+                        src="https://picsum.photos/800/500?random=22"
+                        alt="Northern Pakistan mountains"
+                        class="blog-image"
+                    >
+
+                    <div class="blog-content">
+
+                        <span class="blog-category">
+                            Pakistan Tourism
+                        </span>
+
+                        <div class="blog-date">
+                            <i class="bi bi-calendar3"></i>
+                            September 3, 2026
+                        </div>
+
+                        <h3>
+                            Beautiful Places to Visit in Northern Pakistan
+                        </h3>
+
+                        <p>
+                            From majestic mountains to peaceful valleys,
+                            discover some of the amazing destinations that
+                            make Northern Pakistan a memorable place to visit.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="read-more"
+                            data-bs-toggle="modal"
+                            data-bs-target="#blogModal"
+                            onclick="showBlog(
+                                'Beautiful Places to Visit in Northern Pakistan',
+                                'Northern Pakistan is famous for its breathtaking mountains, beautiful valleys, lakes and peaceful landscapes. Hunza, Swat, Kaghan, Naran and other northern destinations offer memorable experiences for travelers. Before traveling, check the season, road conditions and local travel information.'
+                            )"
+                        >
+                            Learn More
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==========================================
+                 BLOG 3
+            =========================================== -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="blog-card">
+
+                    <img
+                        src="https://picsum.photos/800/500?random=23"
+                        alt="Passport and travel documents"
+                        class="blog-image"
+                    >
+
+                    <div class="blog-content">
+
+                        <span class="blog-category">
+                            Visa Guide
+                        </span>
+
+                        <div class="blog-date">
+                            <i class="bi bi-calendar3"></i>
+                            August 30, 2026
+                        </div>
+
+                        <h3>
+                            A Simple Guide to Preparing for Your Visa Application
+                        </h3>
+
+                        <p>
+                            Learn about the basic documents and preparation
+                            steps you should consider before submitting a
+                            visa application for your international journey.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="read-more"
+                            data-bs-toggle="modal"
+                            data-bs-target="#blogModal"
+                            onclick="showBlog(
+                                'A Simple Guide to Preparing for Your Visa Application',
+                                'Before applying for a visa, carefully check the requirements for your destination. Prepare your passport, photographs, financial documents, travel plans and any other documents requested by the relevant authorities. Requirements can vary by country and visa type, so always verify the latest official information before applying.'
+                            )"
+                        >
+                            Learn More
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==========================================
+                 BLOG 4
+            =========================================== -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="blog-card">
+
+                    <img
+                        src="https://picsum.photos/800/500?random=24"
+                        alt="Airplane flying"
+                        class="blog-image"
+                    >
+
+                    <div class="blog-content">
+
+                        <span class="blog-category">
+                            Flight Travel
+                        </span>
+
+                        <div class="blog-date">
+                            <i class="bi bi-calendar3"></i>
+                            August 27, 2026
+                        </div>
+
+                        <h3>
+                            How to Make Your Flight Journey More Comfortable
+                        </h3>
+
+                        <p>
+                            Flying can be exciting. Here are some useful ideas
+                            to help you organize your travel documents, luggage,
+                            airport time, and flight plans.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="read-more"
+                            data-bs-toggle="modal"
+                            data-bs-target="#blogModal"
+                            onclick="showBlog(
+                                'How to Make Your Flight Journey More Comfortable',
+                                'Make your flight experience easier by arriving at the airport with enough time, keeping your important documents accessible, checking your baggage allowance, and preparing essential items before departure. It is also helpful to check your flight status before leaving for the airport.'
+                            )"
+                        >
+                            Learn More
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==========================================
+                 BLOG 5
+            =========================================== -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="blog-card">
+
+                    <img
+                        src="https://picsum.photos/800/500?random=25"
+                        alt="Umrah travel"
+                        class="blog-image"
+                    >
+
+                    <div class="blog-content">
+
+                        <span class="blog-category">
+                            Umrah
+                        </span>
+
+                        <div class="blog-date">
+                            <i class="bi bi-calendar3"></i>
+                            August 24, 2026
+                        </div>
+
+                        <h3>
+                            Things to Consider Before Your Umrah Journey
+                        </h3>
+
+                        <p>
+                            Preparing for Umrah requires thoughtful planning.
+                            Explore some general travel and preparation tips
+                            before beginning your spiritual journey.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="read-more"
+                            data-bs-toggle="modal"
+                            data-bs-target="#blogModal"
+                            onclick="showBlog(
+                                'Things to Consider Before Your Umrah Journey',
+                                'Before your Umrah journey, organize your travel documents, accommodation, transportation and other arrangements in advance. Learn about the current travel requirements and plan your schedule carefully. Preparing ahead can help you focus more comfortably on your spiritual journey.'
+                            )"
+                        >
+                            Learn More
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==========================================
+                 BLOG 6
+            =========================================== -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="blog-card">
+
+                    <img
+                        src="https://picsum.photos/800/500?random=26"
+                        alt="Hotel accommodation"
+                        class="blog-image"
+                    >
+
+                    <div class="blog-content">
+
+                        <span class="blog-category">
+                            Travel Planning
+                        </span>
+
+                        <div class="blog-date">
+                            <i class="bi bi-calendar3"></i>
+                            August 20, 2026
+                        </div>
+
+                        <h3>
+                            How to Choose the Right Hotel for Your Trip
+                        </h3>
+
+                        <p>
+                            Location, facilities, budget, and reviews all matter
+                            when choosing accommodation. Learn what to consider
+                            before making your hotel booking.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="read-more"
+                            data-bs-toggle="modal"
+                            data-bs-target="#blogModal"
+                            onclick="showBlog(
+                                'How to Choose the Right Hotel for Your Trip',
+                                'When choosing a hotel, consider its location, price, facilities, cancellation policy and suitability for your travel plans. Check the distance from important attractions or transport points and review the available facilities before confirming your booking.'
+                            )"
+                        >
+                            Learn More
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+     <!-- BLOG INFORMATION MODAL -->
+
+
+<div
+    class="modal fade"
+    id="blogModal"
+    tabindex="-1"
+    aria-labelledby="blogModalLabel"
+    aria-hidden="true"
+>
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+
+            <!-- MODAL HEADER -->
+
+            <div class="modal-header">
+
+                <h5
+                    class="modal-title"
+                    id="blogTitle"
+                >
+                    Blog Title
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+
+            </div>
+
+
+            <!-- MODAL BODY -->
+
+            <div class="modal-body">
+
+                <p id="blogDescription">
+                    Blog information will appear here.
+                </p>
+
+            </div>
+
+
+            <!-- MODAL FOOTER -->
+
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-dismiss="modal"
+                >
+                    Close
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Back to Home Button -->
+<div class="text-center mt-5">
+    <a href="../index.html" class="back-home-btn">
+        <i class="bi bi-house-door-fill me-2"></i>
+        Back to Home
+    </a>
+</div>
+     <!-- BOOTSTRAP JAVASCRIPT -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+    function showBlog(title, description) {
+
+        document.getElementById("blogTitle").textContent = title;
+
+        document.getElementById("blogDescription").textContent = description;
+
+    }
+
+</script>
+
+
+</body>
+</html>
+
