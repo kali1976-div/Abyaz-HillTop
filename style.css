@@ -405,23 +405,42 @@ footer.site-footer a{
   display:block; margin-bottom:.6rem; font-size:.9rem;
   transition:.2s;
 }
-footer.site-footer a:hover{color:#fff;}
-.footer-brand .brand-text .top{color:#fff;}
-.footer-brand .brand-text .top span{color:#7fb6ff;}
-.footer-brand .brand-text .sub{color:rgba(255,255,255,.6);}
-.social-icon{
-  transform:translateY(20px);  
-  width:36px;
-  height:36px;
-  border-radius:50%;
-  background:rgba(255,255,255,.08);
-  display:flex;
-  color:#fff;
-  font-size:.95rem;
-  transition:.2s;
+.social-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    font-size: 24px;
+
+    margin-right: 10px;
+    margin-bottom: 0 !important;
+
+    transform: none !important;
+    transition: all 0.3s ease;
 }
 
-.social-icon:hover{background:var(--blue);}
+.social-icon:hover {
+    background: var(--blue);
+    transform: translateY(-3px) !important;
+}
+
+/* Keep every icon perfectly centered */
+.social-icon i {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .footer-sub-input{
   background:rgba(255,255,255,.08);
   border:1px solid rgba(255,255,255,.15);
