@@ -8,13 +8,13 @@ const teamData = [
     name: "Abyaz Durrani",
     role: "Founder & CEO",
     photo: "https://picsum.photos/seed/teambilal/400/450",
-    socials: { facebook: "#", instagram: "#", whatsapp: "https://wa.me/923001234567" }
+    socials: { tiktok: "https://www.tiktok.com/@abyazhilltoptraveltours", whatsapp: "https://wa.me/923001234567" }
   },
   {
     name: "Zulkifal Jan",
-    role: "Main Developer & Mantainer",
+    role: "Developer & Maintainer",
     photo: "https://picsum.photos/seed/teamayesha/400/450",
-    socials: { facebook: "#", instagram: "#", whatsapp: "https://wa.me/923045242523" }
+    socials: {tiktok: "https://www.tiktok.com/@galaxy_zul", whatsapp: "https://wa.me/923045242523" }
   }
 
 ];
@@ -40,8 +40,7 @@ function renderTeam(list){
         <div class="photo-wrap">
           <img src="${member.photo}" alt="${member.name}">
           <div class="socials">
-            <a href="${member.socials.facebook}"><i class="bi bi-facebook"></i></a>
-            <a href="${member.socials.instagram}"><i class="bi bi-instagram"></i></a>
+            <a href="${member.socials.tiktok}"><i class="bi bi-tiktok"></i></a>
             <a href="${member.socials.whatsapp}"><i class="bi bi-whatsapp"></i></a>
           </div>
         </div>
