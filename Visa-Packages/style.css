@@ -314,3 +314,24 @@ footer.site-footer a{
         padding: 20px 15px;
     }
 }
+
+   /* VIEW MORE BUTTON */
+
+
+#viewMoreContainer {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#viewMoreContainer button {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 28px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+#viewMoreContainer button:hover {
+    transform: translateY(-2px);
+}
