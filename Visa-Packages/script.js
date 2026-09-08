@@ -191,7 +191,7 @@ const visaPackages = [
     country: "Saudi Arabia ",
     title: "Tourist Visa",
     price: 5000 ,
-    duration: "1 days",
+    duration: "1 years",
     processing: "25 - 30 Business Days",
     popular: true,
     features: [
