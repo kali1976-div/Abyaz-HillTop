@@ -52,11 +52,11 @@ const visaPackages = [
   },
 // done
   {
-    category: "study",
-    icon: "bi-mortarboard",
+    category: "work",
+    icon: "bi-briefcase",
     color: "green",
     country: "Serbia",
-    title: "Study Visa",
+    title: "Work Visa",
     price: 17000,
     duration: "1 Year",
     processing: "5 - 6 months",
@@ -118,11 +118,11 @@ const visaPackages = [
     ]
   },
      {
-    category: "study",
-    icon: "bi-mortarboard",
+    category: "work",
+    icon: "bi-briefcase",
     color: "blue",
     country: "Greece",
-    title: "Study Visa",
+    title: "Work Visa",
     price: 21000,
     duration: "1 Year",
     processing: "5 - 6 months",
@@ -151,11 +151,11 @@ const visaPackages = [
   },
 
     {
-    category: "study",
-    icon: "bi-mortarboard",
+    category: "work",
+    icon: "bi-briefcase",
     color: "purple",
     country: "Bulgaria",
-    title: "Study Visa",
+    title: "Work Visa",
     price: 20000,
     duration: "1 Year",
     processing: "5 - 6 months",
