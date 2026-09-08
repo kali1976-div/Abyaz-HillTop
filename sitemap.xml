@@ -1,1 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+    <url>
+        <loc>https://abyaz-hill-top-and-tours.vercel.app/</loc>
+    </url>
+
+    <url>
+        <loc>https://abyaz-hill-top-and-tours.vercel.app/About-Us/</loc>
+    </url>
+
+    <url>
+        <loc>https://abyaz-hill-top-and-tours.vercel.app/Contacts-us/</loc>
+    </url>
+
+    <url>
+        <loc>https://abyaz-hill-top-and-tours.vercel.app/Visa-Packages/</loc>
+    </url>
+
+    <url>
+        <loc>https://abyaz-hill-top-and-tours.vercel.app/blogs/</loc>
+    </url>
+
+    <url>
+        <loc>https://abyaz-hill-top-and-tours.vercel.app/faqs/</loc>
+    </url>
+
+    <url>
+        <loc>https://abyaz-hill-top-and-tours.vercel.app/service/</loc>
+    </url>
+
+</urlset>
