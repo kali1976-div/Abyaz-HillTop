@@ -1,7 +1,6 @@
 
-/* ============================================================
-   SUPABASE
-   ============================================================ */
+   // SUPABASE
+ 
 
 const SUPABASE_URL = "https://lywgpqykwnoijlhkvogz.supabase.co";
 
@@ -142,11 +141,8 @@ function uniqueCategories(list) {
 
 
 function renderTabs() {
-
   tabsWrap.innerHTML = "";
-
   uniqueCategories(visaPackages).forEach(cat => {
-
     const btn = document.createElement("button");
 
     btn.className =
@@ -155,15 +151,17 @@ function renderTabs() {
 
     btn.textContent = cat;
 
-    btn.addEventListener("click", () => {
+btn.addEventListener("click", () => {
 
-      activeCategory = cat;
+  activeCategory = cat;
 
-      renderTabs();
-      renderGrid();
+  // Start from first row again
+  visiblePackages = 3;
 
-    });
+  renderTabs();
+  renderGrid();
 
+});
     tabsWrap.appendChild(btn);
 
   });
@@ -174,6 +172,13 @@ function renderTabs() {
 /* ============================================================
    VISA GRID
    ============================================================ */
+
+/* ============================================================
+   VISA GRID + VIEW MORE
+   ============================================================ */
+
+let visiblePackages = 3;
+const packagesPerRow = 3;
 
 function renderGrid() {
 
@@ -189,24 +194,22 @@ function renderGrid() {
   emptyState.style.display =
     list.length ? "none" : "block";
 
+  // Show only currently visible packages
+  const visibleList = list.slice(0, visiblePackages);
 
-  list.forEach(pkg => {
+  visibleList.forEach(pkg => {
 
     const col = document.createElement("div");
 
     col.className = "col-12 col-sm-6 col-lg-4";
 
-
     col.innerHTML = `
-
       <div class="visa-card">
 
         <div class="top-strip">
 
           <div class="flag-icon bg-${pkg.color}-tint">
-
             <i class="bi ${pkg.icon}"></i>
-
           </div>
 
           ${
@@ -217,30 +220,21 @@ function renderGrid() {
 
         </div>
 
-
         <div class="body">
 
           <h5>${pkg.title}</h5>
 
           <div class="country">
-
             <i class="bi bi-geo-alt me-1"></i>
             ${pkg.country}
-
           </div>
-
 
           <div class="price">
-
             $${pkg.price}
-
             <span> / applicant</span>
-
           </div>
 
-
           <ul>
-
             ${pkg.features
               .map(
                 f => `
@@ -251,9 +245,7 @@ function renderGrid() {
                 `
               )
               .join("")}
-
           </ul>
-
 
           <div class="meta-row">
 
@@ -269,7 +261,6 @@ function renderGrid() {
 
           </div>
 
-
           <button
             class="btn-apply"
             type="button"
@@ -280,29 +271,80 @@ function renderGrid() {
         </div>
 
       </div>
-
     `;
 
-
-    /* Apply Now button */
-
+    /* Apply Now */
     const applyButton =
       col.querySelector(".btn-apply");
 
-
     applyButton.addEventListener("click", () => {
-
       openVisaApplication(pkg);
-
     });
-
 
     grid.appendChild(col);
 
   });
 
-}
 
+  /* ============================================================
+     VIEW MORE BUTTON
+     ============================================================ */
+
+  let viewMoreContainer =
+    document.getElementById("viewMoreContainer");
+
+  if (!viewMoreContainer) {
+
+    viewMoreContainer =
+      document.createElement("div");
+
+    viewMoreContainer.id =
+      "viewMoreContainer";
+
+    viewMoreContainer.className =
+      "text-center mt-4";
+
+    grid.parentElement.appendChild(
+      viewMoreContainer
+    );
+  }
+
+  viewMoreContainer.innerHTML = "";
+
+
+  /* Show View More only when packages remain */
+
+  if (visiblePackages < list.length) {
+
+    const viewMoreButton =
+      document.createElement("button");
+
+    viewMoreButton.className =
+      "btn btn-primary px-4 py-2";
+
+    viewMoreButton.innerHTML = `
+      View More
+      <i class="bi bi-chevron-down ms-2"></i>
+    `;
+
+    viewMoreButton.addEventListener(
+      "click",
+      () => {
+
+        visiblePackages += packagesPerRow;
+
+        renderGrid();
+
+      }
+    );
+
+    viewMoreContainer.appendChild(
+      viewMoreButton
+    );
+
+  }
+
+}
 
 /* ============================================================
    VISA APPLICATION MODAL
