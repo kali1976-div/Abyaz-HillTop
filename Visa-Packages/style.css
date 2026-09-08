@@ -233,3 +233,84 @@ footer.site-footer a{
   .hero h1 .script-text{font-size:1.8rem;}
   .brand-text .top{font-size:1rem;}
 }
+
+/* ============================================================
+   VISA APPLICATION MODAL - FORCE SCROLL
+   ============================================================ */
+
+#visaApplicationModal {
+    overflow: hidden !important;
+}
+
+#visaApplicationModal .modal-dialog {
+    height: calc(100vh - 30px);
+    max-height: calc(100vh - 30px);
+    margin: 15px auto;
+}
+
+#visaApplicationModal .modal-content {
+    height: 100%;
+    max-height: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+}
+
+/* IMPORTANT: your form is between modal-content and modal-body */
+#visaApplicationModal #visaApplicationForm {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    height: 100% !important;
+    overflow: hidden !important;
+}
+
+#visaApplicationModal .modal-header {
+    flex: 0 0 auto !important;
+}
+
+#visaApplicationModal .modal-body {
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    height: auto !important;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+#visaApplicationModal .modal-footer {
+    flex: 0 0 auto !important;
+}
+
+/* Always show scrollbar */
+#visaApplicationModal .modal-body::-webkit-scrollbar {
+    width: 10px;
+}
+
+#visaApplicationModal .modal-body::-webkit-scrollbar-track {
+    background: #eeeeee;
+}
+
+#visaApplicationModal .modal-body::-webkit-scrollbar-thumb {
+    background: #888888;
+    border-radius: 10px;
+}
+
+#visaApplicationModal .modal-body::-webkit-scrollbar-thumb:hover {
+    background: #555555;
+}
+
+
+/* MOBILE */
+@media (max-width: 576px) {
+    #visaApplicationModal .modal-dialog {
+        height: calc(100vh - 20px);
+        max-height: calc(100vh - 20px);
+        margin: 10px;
+    }
+
+    #visaApplicationModal .modal-body {
+        padding: 20px 15px;
+    }
+}
