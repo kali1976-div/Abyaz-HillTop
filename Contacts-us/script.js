@@ -15,9 +15,9 @@ const supabaseClient = window.supabase.createClient(
 
 const contactInfo = [
   { icon: "bi-telephone-fill", color: "blue",   title: "Call Us",    value: "+92 313 5187440",     href: "https://wa.me/923135187440" },
-  { icon: "bi-envelope-fill",  color: "green",  title: "Email Us",   value: "abyazhilltoptravelandtours", href: "https://mail.google.com/mail/?view=cm&fs=1&to=abyazhilltoptravelandtours@gmail.com" },
-  { icon: "bi-geo-alt-fill",   color: "purple", title: "Visit Us",   value: "Deans , Peshawar, Pakistan",   href: "https://www.google.com/maps/place/Deans+centre+peshawar+saddar+Lesar+vision/@34.0011791,71.5409391,16.21z/data=!4m14!1m7!3m6!1s0x38d917006ff7dd25:0x4b469d142c41334d!2sDeans+centre+peshawar+saddar+Lesar+vision!8m2!3d34.0007963!4d71.5458297!16s%2Fg%2F11xkwb71r3!3m5!1s0x38d917006ff7dd25:0x4b469d142c41334d!8m2!3d34.0007963!4d71.5458297!16s%2Fg%2F11xkwb71r3?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D" },
-  { icon: "bi-clock-fill",     color: "orange", title: "Working Hours", value: "Mon – Sat, 9AM – 8PM", href: "#contactInfoGrid" }
+  { icon: "bi-envelope-fill",  color: "green",  title: "Email Us",   value: "abyazhill toptravelandtours", href: "https://mail.google.com/mail/?view=cm&fs=1&to=abyazhilltoptravelandtours@gmail.com" },
+  { icon: "bi-geo-alt-fill",   color: "purple", title: "Visit Us",   value: "UG-406 Deans , Peshawar, Pakistan",   href: "https://www.google.com/maps/place/Deans+centre+peshawar+saddar+Lesar+vision/@34.0011791,71.5409391,16.21z/data=!4m14!1m7!3m6!1s0x38d917006ff7dd25:0x4b469d142c41334d!2sDeans+centre+peshawar+saddar+Lesar+vision!8m2!3d34.0007963!4d71.5458297!16s%2Fg%2F11xkwb71r3!3m5!1s0x38d917006ff7dd25:0x4b469d142c41334d!8m2!3d34.0007963!4d71.5458297!16s%2Fg%2F11xkwb71r3?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D" },
+  { icon: "bi-clock-fill",     color: "orange", title: "Working Hours", value: "Mon – Sat, 12: 00 pm to 6: 00 pm", href: "#contactInfoGrid" }
 ];
 
 const infoGrid = document.getElementById('contactInfoGrid');
@@ -41,9 +41,9 @@ const officesData = [
   {
     hq: true,
     city: "Peshawar",
-    address: "Deans Centre, Peshawar, Pakistan",
+    address: " UG-406 Deans Centre, Peshawar, Pakistan",
     phone: "+92 313 518 7440",
-    hours: "Mon – Sat, 9:00 AM – 8:00 PM"
+    hours: "Mon – Sat, 12: 00 pm to 6: 00 pm"
   }
 ];
 
