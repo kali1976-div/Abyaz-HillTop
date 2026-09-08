@@ -1,6 +1,7 @@
 
-   // SUPABASE
- 
+/* ============================================================
+   SUPABASE
+   ============================================================ */
 
 const SUPABASE_URL = "https://lywgpqykwnoijlhkvogz.supabase.co";
 
@@ -18,47 +19,47 @@ const supabaseClient = window.supabase.createClient(
 const visaPackages = [
   {
     category: "study",
-    icon: "bi-airplane",
+    icon: "bi-mortarboard",
     color: "blue",
     country: "Turkey",
     title: "Student Visa",
     price: 3000,
     duration: "30 Days",
-    processing: "2 - 3 Business Days",
+    processing: "20 - 22 Business Days",
     popular: true,
     features: [
-      "Single/Multiple entry options",
-      "Document review included",
-      "Real-time status updates"
+      "University document checklist",
+      "Financial proof guidance",
+      "Interview preparation"
     ]
   },
 
   {
-    category: "Business",
-    icon: "bi-briefcase",
+    category: "Tourist",
+    icon: "bi-airplane",
     color: "purple",
-    country: "Schengen / Europe",
-    title: "Business Visa",
-    price: 219,
-    duration: "90 Days",
-    processing: "10-15 Business Days",
+    country: "Dubai / UAE",
+    title: "Tourist Visa",
+    price: 820,
+    duration: "30 days",
+    processing: "2 - 3 Business Days",
     popular: false,
     features: [
-      "Invitation letter guidance",
-      "Appointment scheduling",
-      "Application tracking"
+      "Fast-track processing",
+      "Low document requirement",
+      "Best for short trips"
     ]
   },
-
+// done
   {
-    category: "Study",
-    icon: "bi-mortarboard",
+    category: "work",
+    icon: "bi-briefcase",
     color: "green",
-    country: "UK / Canada",
-    title: "Student Visa",
-    price: 299,
-    duration: "Course Duration",
-    processing: "2-6 Weeks",
+    country: "Serbia",
+    title: "Work Visa",
+    price: 17000,
+    duration: "1 Year",
+    processing: "5 - 6 months",
     popular: false,
     features: [
       "University document checklist",
@@ -73,9 +74,9 @@ const visaPackages = [
     color: "teal",
     country: "Saudi Arabia",
     title: "Umrah Visa",
-    price: 179,
-    duration: "30 Days",
-    processing: "3-7 Business Days",
+    price: 920,
+    duration: "14 / 21 Days",
+    processing: "15 - 20 Business Days",
     popular: true,
     features: [
       "Group & individual options",
@@ -85,19 +86,51 @@ const visaPackages = [
   },
 
   {
-    category: "Work",
-    icon: "bi-tools",
+    category: "Business",
+    icon: "bi-briefcase",
     color: "orange",
-    country: "Gulf Countries",
-    title: "Work Visa",
-    price: 349,
-    duration: "1-2 Years",
-    processing: "3-8 Weeks",
+    country: "Dubai / UAE",
+    title: "Business Visa",
+    price: 950,
+    duration: "5 Years",
+    processing: "25 - 30 Business Days",
     popular: false,
     features: [
       "Employer document handling",
       "Medical & labor clearance",
       "Contract attestation support"
+    ]
+  },
+     {
+    category: "work",
+    icon: "bi-briefcase",
+    color: "blue",
+    country: "Greece",
+    title: "Work Visa",
+    price: 21000,
+    duration: "1 Year",
+    processing: "5 - 6 months",
+    popular: false,
+    features: [
+      "University document checklist",
+      "Financial proof guidance",
+      "Interview preparation"
+    ]
+  },
+    {
+    category: "work",
+    icon: "bi-briefcase",
+    color: "purple",
+    country: "Bulgaria",
+    title: "Work Visa",
+    price: 20000,
+    duration: "1 Year",
+    processing: "5 - 6 months",
+    popular: true,
+    features: [
+      "University document checklist",
+      "Financial proof guidance",
+      "Interview preparation"
     ]
   },
 
@@ -107,10 +140,26 @@ const visaPackages = [
     color: "pink",
     country: "Malaysia / Thailand",
     title: "Transit & Tourist Visa",
-    price: 99,
-    duration: "15-30 Days",
-    processing: "2-4 Business Days",
+    price: 1100,
+    duration: "30 Days",
+    processing: "25 - 30 Business Days",
     popular: false,
+    features: [
+      "Fast-track processing",
+      "Low document requirement",
+      "Best for short trips"
+    ]
+  },
+    {
+    category: "Tourist",
+    icon: "bi-airplane-engines",
+    color: "red",
+    country: "Sri Lanka / Azerbaijan",
+    title: "Transit & Tourist Visa",
+    price: 1100,
+    duration: "30 Days",
+    processing: "25 - 30 Business Days",
+    popular: true,
     features: [
       "Fast-track processing",
       "Low document requirement",
@@ -131,9 +180,9 @@ const emptyState = document.getElementById("emptyState");
 let activeCategory = "All";
 
 
-/* ============================================================
-   CATEGORY FILTER
-   ============================================================ */
+
+  //  CATEGORY FILTER
+
 
 function uniqueCategories(list) {
   return ["All", ...new Set(list.map(p => p.category))];
@@ -171,10 +220,6 @@ btn.addEventListener("click", () => {
 
 /* ============================================================
    VISA GRID
-   ============================================================ */
-
-/* ============================================================
-   VISA GRID + VIEW MORE
    ============================================================ */
 
 let visiblePackages = 3;
