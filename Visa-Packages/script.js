@@ -35,7 +35,7 @@ const visaPackages = [
   },
 
   {
-    category: "Tourist",
+    category: "visit",
     icon: "bi-airplane",
     color: "purple",
     country: "Dubai / UAE",
@@ -43,7 +43,7 @@ const visaPackages = [
     price: 820,
     duration: "30 days",
     processing: "2 - 3 Business Days",
-    popular: false,
+    popular: true,
     features: [
       "Fast-track processing",
       "Low document requirement",
@@ -52,11 +52,11 @@ const visaPackages = [
   },
 // done
   {
-    category: "work",
-    icon: "bi-briefcase",
+    category: "study",
+    icon: "bi-mortarboard",
     color: "green",
     country: "Serbia",
-    title: "Work Visa",
+    title: "Study Visa",
     price: 17000,
     duration: "1 Year",
     processing: "5 - 6 months",
@@ -91,7 +91,7 @@ const visaPackages = [
     color: "orange",
     country: "Dubai / UAE",
     title: "Business Visa",
-    price: 950,
+    price: 1400,
     duration: "5 Years",
     processing: "25 - 30 Business Days",
     popular: false,
@@ -101,12 +101,28 @@ const visaPackages = [
       "Contract attestation support"
     ]
   },
+      {
+    category: "visit",
+    icon: "bi-airplane",
+    color: "black",
+    country: "Indonesia",
+    title: "Visit & Tourist Visa",
+    price: 300 ,
+    duration: "30 Days",
+    processing: "25 - 30 Business Days",
+    popular: true,
+    features: [
+      "Fast-track processing",
+      "Low document requirement",
+      "Best for short trips"
+    ]
+  },
      {
-    category: "work",
-    icon: "bi-briefcase",
+    category: "study",
+    icon: "bi-mortarboard",
     color: "blue",
     country: "Greece",
-    title: "Work Visa",
+    title: "Study Visa",
     price: 21000,
     duration: "1 Year",
     processing: "5 - 6 months",
@@ -118,11 +134,28 @@ const visaPackages = [
     ]
   },
     {
-    category: "work",
-    icon: "bi-briefcase",
+    category: "visit",
+    icon: "bi-airplane",
+    color: "purple",
+    country: "Dubai / UAE",
+    title: "Tourist Visa",
+    price: 950,
+    duration: "60 days",
+    processing: "7 - 10 Business Days",
+    popular: true,
+    features: [
+      "Fast-track processing",
+      "Low document requirement",
+      "Best for short trips"
+    ]
+  },
+
+    {
+    category: "study",
+    icon: "bi-mortarboard",
     color: "purple",
     country: "Bulgaria",
-    title: "Work Visa",
+    title: "Study Visa",
     price: 20000,
     duration: "1 Year",
     processing: "5 - 6 months",
@@ -150,9 +183,26 @@ const visaPackages = [
       "Best for short trips"
     ]
   },
+
+  {
+    category: "visit",
+    icon: "bi-airplane",
+    color: "green",
+    country: "Saudi Arabia ",
+    title: "Tourist Visa",
+    price: 5000 ,
+    duration: "1 days",
+    processing: "25 - 30 Business Days",
+    popular: true,
+    features: [
+      "Slow-track processing",
+      "Medium document requirement",
+      "Best for short trips"
+    ]
+  },
     {
     category: "Tourist",
-    icon: "bi-airplane-engines",
+    icon: "bi-airplane",
     color: "red",
     country: "Sri Lanka / Azerbaijan",
     title: "Transit & Tourist Visa",
@@ -165,7 +215,46 @@ const visaPackages = [
       "Low document requirement",
       "Best for short trips"
     ]
+  },
+
+    {
+    category: "visit",
+    icon: "bi-airplane-engines",
+    color: "purple",
+    country: "China ",
+    title: "Visit & Tourist Visa",
+    price: 400,
+    duration: "30 Days",
+    processing: "20 - 25 Business Days",
+    popular: false,
+    features: [
+      "Fast-track processing",
+      "Low document requirement",
+      "Best for short trips"
+    ]
+  },
+
+      {
+    category: "visit",
+    icon: "bi-airplane-engines",
+    color: "red",
+    country: "Hong Kong / Singapore ",
+    title: "Visit & Tourist Visa",
+    price: 300,
+    duration: "30 Days",
+    processing: "20 - 25 Business Days",
+    popular: true,
+    features: [
+      "Fast-track processing",
+      "Low document requirement",
+      "Best for short trips"
+    ]
   }
+   
+
+
+
+
 ];
 
 
